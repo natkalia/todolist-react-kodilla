@@ -10,6 +10,7 @@ import Creator from '../Creator/Creator';
 class List extends React.Component {
   state = {
     columns: this.props.columns || [],
+    cards: this.props.cards || [],
   }
 
   /* typechecking on the props for a component with prop-types library*/
@@ -18,6 +19,7 @@ class List extends React.Component {
     image: PropTypes.string,
     description: PropTypes.node,
     columns: PropTypes.array,
+    cards: PropTypes.array,
   }
   /* default value of prop if prop not provided */
   static defaultProps = {
@@ -43,24 +45,29 @@ class List extends React.Component {
   render() {
     return (
       <section className={styles.component}>
+        
         <Hero 
           titleText={this.props.title}
           imageSource={this.props.image}
         />
+
         <div className={styles.description}>
           {ReactHtmlParser(this.props.description)}
         </div>
+
         <div className={styles.columns}>
           {this.state.columns.map(({key, ...columnProps}) => (
             <Column key={key} {...columnProps} />
           ))}
         </div>
+
         <div className={styles.creator}>
           <Creator 
             text={settings.columnCreatorText} 
             action={title => this.addColumn(title)}
           />
         </div>
+
       </section>
     )
   }
