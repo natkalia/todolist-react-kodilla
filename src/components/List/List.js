@@ -7,6 +7,7 @@ class List extends React.Component {
   /* typechecking on the props for a component with prop-types library*/
   static propTypes = {
     title: PropTypes.node.isRequired,
+    image: PropTypes.string,
     children: PropTypes.node,
   }
   /* default value of prop if prop not provided */
@@ -17,7 +18,10 @@ class List extends React.Component {
   render() {
     return (
       <section className={styles.component}>
-        <Hero titleText={this.props.title}/>
+        <Hero 
+          titleText={this.props.title}
+          imageSource={this.props.image}
+        />
         <div className={styles.description}>
           {this.props.children}
         </div>
