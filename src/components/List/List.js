@@ -3,17 +3,20 @@ import styles from './List.scss';
 import Hero from '../Hero/Hero';
 import PropTypes from 'prop-types';
 import Column from '../Column/Column';
+import {settings} from '../../data/dataStore';
+import ReactHtmlParser from 'react-html-parser';
 
 class List extends React.Component {
   /* typechecking on the props for a component with prop-types library*/
   static propTypes = {
     title: PropTypes.node.isRequired,
     image: PropTypes.string,
-    children: PropTypes.node,
+    description: PropTypes.node,
+    columns: PropTypes.array,
   }
   /* default value of prop if prop not provided */
   static defaultProps = {
-    children: <p>I can do all the things!!!</p>,
+    description: settings.defaultListDescription,
   }
 
   render() {
@@ -24,7 +27,7 @@ class List extends React.Component {
           imageSource={this.props.image}
         />
         <div className={styles.description}>
-          {this.props.children}
+          {ReactHtmlParser(this.props.description)}
         </div>
         <div className={styles.columns}>
           <Column title='Work'/>
