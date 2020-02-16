@@ -24,4 +24,11 @@
       background: darken($color-warning, 5%);
     }
   }
+
+  &.action {
+    background: $color-action;
+    &:hover {
+      background: darken($color-action, 5%);
+    }
+  }
 }
