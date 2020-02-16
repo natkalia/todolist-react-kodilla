@@ -1,4 +1,5 @@
 export const settings = {
+  listCreatorText: 'Add new list',
   columnCreatorText: 'Add new column',
   cardCreatorText: 'Add new card',
   creator: {
@@ -7,6 +8,7 @@ export const settings = {
     defaultText: 'Add new item',
   },
   defaultListDescription: '<p>I can do all the things!!!</p>',
+  defaultListImage: 'https://images.pexels.com/photos/540518/pexels-photo-540518.jpeg?cs=srgb&dl=clouds-cold-frost-frosty-540518.jpg&fm=jpg',
   defaultColumnIcon: 'list-alt',
 };
 
@@ -16,6 +18,7 @@ export const pageContents = {
 };
 
 export const listData = {
+  key: 0,
   title: 'Things to do <sup>soon!</sup>',
   description: 'Interesting things I want to check out!',
   image: 'http://uploads.kodilla.com/bootcamp/fer/11.react/space.png',
