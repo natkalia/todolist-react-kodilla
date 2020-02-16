@@ -13,6 +13,9 @@ Coming soon.
 
 Coming soon.
 
+## Todo
+- [ ] add a component, which by default will only display the menu button (hamburger), and when clicked, will show a drop-down menu containing all the lists and columns currently available in the app
+
 ## Project status
 In progress.
 
