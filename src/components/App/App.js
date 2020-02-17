@@ -15,6 +15,8 @@ class App extends React.Component {
   /* typechecking on the props for a component with prop-types library*/
   static propTypes = {
     lists: PropTypes.array,
+    description: PropTypes.string,
+    image: PropTypes.string,
   }
 
   static defaultProps = {
@@ -57,12 +59,12 @@ class App extends React.Component {
 
         <div>
           {this.state.lists.map(({key, ...listProps}) => (
-          <List key={key} {...listProps} />
+            <List key={key} {...listProps} />
           ))}
         </div>
 
       </main>
-    )
+    );
   }
 }
 

@@ -13,7 +13,7 @@ const Hero = props => (
 /* typechecking on the props for a component with prop-types library*/
 Hero.propTypes = {
   titleText: PropTypes.node.isRequired,
-  image: PropTypes.string,
+  imageSource: PropTypes.string,
 };
 
 export default Hero;

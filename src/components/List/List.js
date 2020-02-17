@@ -25,7 +25,7 @@ class List extends React.Component {
     description: settings.defaultListDescription,
   }
 
-   addColumn(title){
+  addColumn(title){
     this.setState(state => (
       {
         columns: [
@@ -34,9 +34,9 @@ class List extends React.Component {
             key: state.columns.length ? state.columns[state.columns.length-1].key+1 : 0,
             title,
             icon: 'list-alt',
-            cards: []
-          }
-        ]
+            cards: [],
+          },
+        ],
       }
     ));
   }
@@ -68,7 +68,7 @@ class List extends React.Component {
         </div>
 
       </section>
-    )
+    );
   }
 }
 
