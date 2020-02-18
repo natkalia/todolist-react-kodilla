@@ -15,6 +15,7 @@ class App extends React.Component {
     image: PropTypes.string,
   }
 
+  /* default value of prop if prop not provided */
   static defaultProps = {
     description: settings.defaultListDescription,
     image: settings.defaultListImage, 

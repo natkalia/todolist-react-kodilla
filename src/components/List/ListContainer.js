@@ -1,14 +1,19 @@
 import {connect} from 'react-redux';
 import List from './List';
+import {createActionAddColumn, getColumnsForList} from '../../redux/columnsRedux';
 
-/* function to filter columns so that only those with proper id are shown on list */
-export const getColumnsForList =
-  ({columns}, listId) => 
-    columns.filter(column => column.listId == listId);
-
-/* use filtering function to compare id */
+/* use imported filtering function to compare id of columns and 
+corresponding list */
 const mapStateToProps = (state, props) => ({
   columns: getColumnsForList(state, props.id),
 });
 
-export default connect(mapStateToProps)(List);
+/* dispatch change to redux store after adding new column */
+const mapDispatchToProps = (dispatch, props) => ({
+  addColumn: title => dispatch(createActionAddColumn({
+    listId: props.id,
+    title,
+  })),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(List);
