@@ -4,6 +4,7 @@ import List from '../List/ListContainer';
 import PropTypes from 'prop-types';
 import Creator from '../Creator/Creator';
 import {settings} from '../../data/dataStore';
+import Search from '../Search/SearchContainer';
 
 class App extends React.Component {
   /* typechecking on the props for a component with prop-types library*/
@@ -29,6 +30,7 @@ class App extends React.Component {
 
         <h1 className={styles.title}>{title}</h1>
         <h2 className={styles.subtitle}>{subtitle}</h2>
+        <Search/>
 
         <div className={styles.creator}>
           <Creator 

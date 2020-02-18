@@ -3,11 +3,12 @@ import shortid from 'shortid';
 // selectors
 
 /* function getCardsForColumn to filter cards so that only 
-those with proper id are shown on column
+those with proper id and including searchString are shown on column
 function used in ColumnContainer */
 export const getCardsForColumn =
-  ({cards}, columnId) => 
-    cards.filter(card => card.columnId == columnId);
+  ({cards, searchString}, columnId) => 
+    cards.filter(card => 
+      ((card.columnId == columnId) && (new RegExp(searchString, 'i').test(card.title))));
 
 // action name creator e.g. app/cards/ADD_CARD
 const reducerName = 'cards';
