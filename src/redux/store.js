@@ -1,5 +1,6 @@
 import {combineReducers, createStore} from 'redux';
 import initialStoreData from '../data/dataStore';
+import listsReducer from './listsRedux';
 import columnsReducer from './columnsRedux';
 import cardsReducer from './cardsRedux';
 
@@ -14,6 +15,7 @@ const initialState = {
 
 // define reducers
 const reducers = {
+  lists: listsReducer,
   columns: columnsReducer,
   cards: cardsReducer,
 };

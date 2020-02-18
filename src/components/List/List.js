@@ -21,6 +21,7 @@ class List extends React.Component {
   /* default value of prop if prop not provided */
   static defaultProps = {
     description: settings.defaultListDescription,
+    image: settings.defaultListImage,
   }
 
   render() {
@@ -46,8 +47,8 @@ class List extends React.Component {
         <div className={styles.creator}>
           <Creator 
             text={settings.columnCreatorText} 
-            // action={title => addColumn(title)}
-            action={addColumn}
+            action={title => addColumn(title)}
+            // action={addColumn}
           />
         </div>
 

@@ -41,6 +41,7 @@ class Column extends React.Component {
           <Creator 
             text={settings.cardCreatorText} 
             action={title => addCard(title)}
+            // action={addCard}
           />
         </div> 
           
