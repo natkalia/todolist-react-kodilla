@@ -2,6 +2,9 @@ export const settings = {
   listCreatorText: 'Add new list',
   columnCreatorText: 'Add new column',
   cardCreatorText: 'Add new card',
+  header: {
+    icon: 'smile',
+  },
   creator: {
     buttonOK: 'OK',
     buttonCancel: 'Cancel',
@@ -19,6 +22,18 @@ export const settings = {
 export const pageContents = {
   title: 'My first React app',
   subtitle: 'A simple to-do app, with lists, columns and cards',
+};
+
+export const infoContents = {
+  titleInfo: 'Information',
+  imageInfo: 'https://images.pexels.com/photos/241544/pexels-photo-241544.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+  contentInfo: 'A task list (also called a to-do list or things-to-do) is a list of tasks to be completed such as chores or steps toward completing a project. It is an inventory tool which serves as an alternative or supplement to memory',
+};
+
+export const faqContents = {
+  titleFaq: 'Frequently Asked Questions',
+  imageFaq: 'https://images.pexels.com/photos/220210/pexels-photo-220210.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+  contentFaq: 'A FAQ is a list of frequently asked questions (FAQs) and answers on a particular topic (also known as Questions and Answers or Frequently Answered Questions).',
 };
 
 // export const listData = {
