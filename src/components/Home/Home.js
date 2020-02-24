@@ -1,10 +1,9 @@
 import React from 'react';
 import styles from './Home.scss';
-import List from '../List/ListContainer';
+import ListLink from '../ListLink/ListLink.js';
 import PropTypes from 'prop-types';
 import Creator from '../Creator/Creator';
 import {settings} from '../../data/dataStore';
-import Search from '../Search/SearchContainer';
 
 class Home extends React.Component {
   /* typechecking on the props for a component with prop-types library*/
@@ -30,7 +29,6 @@ class Home extends React.Component {
 
         <h1 className={styles.title}>{title}</h1>
         <h2 className={styles.subtitle}>{subtitle}</h2>
-        <Search/>
 
         <div className={styles.creator}>
           <Creator 
@@ -41,7 +39,7 @@ class Home extends React.Component {
         </div>
 
         {lists.map(listData => (
-          <List key={listData.id} {...listData} />
+          <ListLink key={listData.id} {...listData} />
         ))}
 
       </main>
