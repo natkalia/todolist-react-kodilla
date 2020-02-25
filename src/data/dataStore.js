@@ -1,9 +1,9 @@
 export const settings = {
-  listCreatorText: 'Add new list',
-  columnCreatorText: 'Add new column',
-  cardCreatorText: 'Add new card',
+  listCreatorText: 'Add new list...',
+  columnCreatorText: 'Add new column...',
+  cardCreatorText: 'Add new card...',
   header: {
-    icon: 'smile',
+    icon: 'home',
   },
   creator: {
     buttonOK: 'OK',
@@ -11,77 +11,82 @@ export const settings = {
     defaultText: 'Add new item',
   },
   search: {
-    defaultText: 'Search...',
+    defaultText: 'Search in all lists...',
     icon: 'search',
   },
   defaultListDescription: '<p>I can do all the things!!!</p>',
-  defaultListImage: 'https://images.pexels.com/photos/540518/pexels-photo-540518.jpeg?cs=srgb&dl=clouds-cold-frost-frosty-540518.jpg&fm=jpg',
+  defaultListImage: '../src/assets/image-from-rawpixel-id-409066-jpeg.jpg',
   defaultColumnIcon: 'list-alt',
 };
 
 export const pageContents = {
-  title: 'My first React app',
-  subtitle: 'A simple to-do app, with lists, columns and cards',
+  title: 'To Do, Doing, Done App',
+  subtitle: 'Your alternative to memory',
 };
 
 export const infoContents = {
   titleInfo: 'Information',
-  imageInfo: 'https://images.pexels.com/photos/241544/pexels-photo-241544.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+  imageInfo: '../src/assets/image-from-rawpixel-id-478002-jpeg.jpg',
   contentInfo: 'A task list (also called a to-do list or things-to-do) is a list of tasks to be completed such as chores or steps toward completing a project. It is an inventory tool which serves as an alternative or supplement to memory',
 };
 
 export const faqContents = {
   titleFaq: 'Frequently Asked Questions',
-  imageFaq: 'https://images.pexels.com/photos/220210/pexels-photo-220210.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+  imageFaq: '../src/assets/image-from-rawpixel-id-881777-original.jpg',
   contentFaq: 'A FAQ is a list of frequently asked questions (FAQs) and answers on a particular topic (also known as Questions and Answers or Frequently Answered Questions).',
 };
 
 const lists = [
   {
     id: 'list-1',
-    title: 'General tasks',
-    description: 'Some random tasks',
-    image: 'https://images.pexels.com/photos/669996/pexels-photo-669996.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+    title: 'Shopping list',
+    description: 'List for food shopping',
+    image: '../src/assets/image-from-rawpixel-id-408945-jpeg.jpg',
   },
   {
     id: 'list-2',
-    title: 'For work!',
+    title: 'For work',
     description: 'My tasks for next week at work',
-    image: 'https://images.pexels.com/photos/313690/pexels-photo-313690.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+    image: '../src/assets/image-from-rawpixel-id-409017-jpeg.jpg', 
   },
   {
     id: 'list-3',
-    title: 'Gifts for Christmas to find',
-    description: 'List of gifts for family and friends',
-    image: 'https://images.pexels.com/photos/3303614/pexels-photo-3303614.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+    title: 'Movies to watch',
+    description: 'List of movies to watch',
+    image: '../src/assets/image-from-rawpixel-id-409037-jpeg.jpg',
   },
-
 ];
 
 const columns = [
   {
     id: 'column-1',
     listId: 'list-1',
-    title: 'Books',
-    icon: 'book',
+    title: 'For dinner',
+    icon: 'hamburger',
   },
   {
     id: 'column-2',
     listId: 'list-1',
-    title: 'Movies',
-    icon: 'film',
+    title: 'For picnic',
+    icon: 'cheese',
   },
   {
     id: 'column-3',
     listId: 'list-1',
-    title: 'Games',
-    icon: 'gamepad',
+    title: 'For breakfast',
+    icon: 'egg',
   },
   {
     id: 'column-4',
     listId: 'list-2',
-    title: 'Strange column',
-    icon: 'question',
+    title: 'Write report',
+    icon: 'marker',
+  },
+  {
+    id: 'column-5',
+    listId: 'list-3',
+    title: 'Thriller',
+    icon: 'film',
   },
 ];
 
@@ -89,32 +94,52 @@ const cards = [
   {
     id: 'card-1',
     columnId: 'column-1',
-    title: 'This Is Going to Hurt',
+    title: 'Salmon',
   },
   {
     id: 'card-2',
     columnId: 'column-1',
-    title: 'Interpreter of Maladies',
+    title: 'Potatoes',
   },
   {
     id: 'card-3',
     columnId: 'column-2',
-    title: 'Harry Potter',
+    title: 'Water',
   },
   {
     id: 'card-4',
     columnId: 'column-2',
-    title: 'Star Wars',
+    title: 'Cucumber',
   },
   {
     id: 'card-5',
-    columnId: 'column-3',
-    title: 'The Witcher',
+    columnId: 'column-2',
+    title: 'Pizza',
   },
   {
     id: 'card-6',
     columnId: 'column-3',
-    title: 'Skyrim',
+    title: 'Bread',
+  },
+  {
+    id: 'card-7',
+    columnId: 'column-3',
+    title: 'Cheese',
+  },
+  {
+    id: 'card-8',
+    columnId: 'column-3',
+    title: 'Tomatoes',
+  },
+  {
+    id: 'card-9',
+    columnId: 'column-5',
+    title: 'Seven',
+  },
+  {
+    id: 'card-10',
+    columnId: 'column-5',
+    title: 'One more film',
   },
 ];
 

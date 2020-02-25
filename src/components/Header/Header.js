@@ -19,9 +19,9 @@ class Header extends React.Component {
               <Icon name={settings.header.icon}/>
             </Link>
             <Search/>
-            <NavLink exact to='/' activeClassName='active'>Home</NavLink>
-            <NavLink exact to='/info' activeClassName='active'>Info</NavLink>
-            <NavLink exact to='/faq' activeClassName='active'>FAQ</NavLink>
+            <NavLink exact to='/' activeClassName='active' className={styles.navlink}>Home</NavLink>
+            <NavLink exact to='/info' activeClassName='active' className={styles.navlink}>Info</NavLink>
+            <NavLink exact to='/faq' activeClassName='active' className={styles.navlink}>FAQ</NavLink>
           </header>
         </Container>
       </div>

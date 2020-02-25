@@ -6,11 +6,13 @@
 }
 
 .component {
+  width: 50%;
+  margin: 0 auto $base-size;
   background: $color-light;
   display: flex;
   margin-bottom: $base-size;
   border-radius: $radius;
-  box-shadow: 0 ($base-size / 4) 0 rgba(0,0,0,0.3);
+  border: 3px solid lighten($color-dark, 10%);
 }
 
 .text {
@@ -24,8 +26,8 @@
 }
 
 .image {
+  text-align: right;
   height: 100px;
-  position: relative;
 
   img {
     object-fit: cover;

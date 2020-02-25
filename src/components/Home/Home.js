@@ -4,6 +4,7 @@ import ListLink from '../ListLink/ListLink.js';
 import PropTypes from 'prop-types';
 import Creator from '../Creator/Creator';
 import {settings} from '../../data/dataStore';
+import Container from '../Container/Container.js';
 
 class Home extends React.Component {
   /* typechecking on the props for a component with prop-types library*/
@@ -26,22 +27,20 @@ class Home extends React.Component {
     const {title, subtitle, lists, addList} = this.props;
     return (
       <main className={styles.component}>
-
-        <h1 className={styles.title}>{title}</h1>
-        <h2 className={styles.subtitle}>{subtitle}</h2>
-
-        <div className={styles.creator}>
-          <Creator 
-            text={settings.listCreatorText} 
-            action={title => addList(title)}
-            // action={addList}
-          />
-        </div>
-
-        {lists.map(listData => (
-          <ListLink key={listData.id} {...listData} />
-        ))}
-
+        <Container>
+          <h1 className={styles.title}>{title}</h1>
+          <h2 className={styles.subtitle}>{subtitle}</h2>
+          <div className={styles.creator}>
+            <Creator 
+              text={settings.listCreatorText} 
+              action={title => addList(title)}
+              // action={addList}
+            />
+          </div>
+          {lists.map(listData => (
+            <ListLink key={listData.id} {...listData} />
+          ))}
+        </Container>
       </main>
     );
   }

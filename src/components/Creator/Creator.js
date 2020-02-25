@@ -59,7 +59,7 @@ class Creator extends React.Component {
         />
         <div className={styles.buttons + (this.state.visibleButtons ? ' ' + styles.buttonsShown : '')}>
           <Button onClick={this.handleOK}>OK</Button>
-          <Button onClick={this.handleEdit} variant='action'>add emoji</Button>
+          <Button onClick={this.handleEdit} variant='action'>emoji</Button>
           <Button onClick={this.handleCancel} variant='danger'>cancel</Button>
         </div>
       </div>

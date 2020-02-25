@@ -7,12 +7,12 @@
 body {
   margin: 0;
   padding: 0;
-  background: $color-dark;
+  background: $color-light;
   font-family: $font-text;
-  font-size: ($base-size * 1.1);
-  color: $color-light;
+  font-size: ($base-size * 1.4);
+  color: $color-dark;
   letter-spacing: 0.5px;
-  overflow-y: scroll;
+  // overflow-y: scroll;
 }
 
 :global(.container) {
