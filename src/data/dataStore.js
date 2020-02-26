@@ -1,4 +1,4 @@
-import defaultImage from './img/image-from-rawpixel-id-409066-jpeg.jpg';
+import defaultImage from '../img/image-from-rawpixel-id-409066-jpeg.jpg';
 import imageListOne from '../img/image-from-rawpixel-id-408945-jpeg.jpg';
 import imageListTwo from '../img/image-from-rawpixel-id-409017-jpeg.jpg';
 import imageListThree from '../img/image-from-rawpixel-id-409037-jpeg.jpg';
