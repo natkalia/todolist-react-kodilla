@@ -3,4 +3,10 @@
 .component {
   width: 100%;
   color: $color-dark;
+  margin: $base-size * 2;
+}
+
+.cards {
+  width: 50%;
+  margin: 0 auto;
 }

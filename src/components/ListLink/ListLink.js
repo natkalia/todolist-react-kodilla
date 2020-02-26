@@ -30,6 +30,7 @@ ListLink.propTypes = {
 
 ListLink.defaultProps = {
   description: settings.defaultListDescription,
+  image: settings.defaultListImage,
 };
 
 export default ListLink;

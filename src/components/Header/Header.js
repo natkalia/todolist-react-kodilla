@@ -14,14 +14,30 @@ class Header extends React.Component {
           <header className={styles.wrapper}>
             <Link 
               to='/'
-              className={styles.logo}
-            >
+              className={styles.logo}>
               <Icon name={settings.header.icon}/>
             </Link>
             <Search/>
-            <NavLink exact to='/' activeClassName='active' className={styles.navlink}>Home</NavLink>
-            <NavLink exact to='/info' activeClassName='active' className={styles.navlink}>Info</NavLink>
-            <NavLink exact to='/faq' activeClassName='active' className={styles.navlink}>FAQ</NavLink>
+            <nav className={styles.nav}>
+              <NavLink 
+                exact to='/' 
+                activeClassName='active' 
+                className={styles.navlink}>
+                  Home
+              </NavLink>
+              <NavLink 
+                exact to='/info' 
+                activeClassName='active' 
+                className={styles.navlink}>
+                Info
+              </NavLink>
+              <NavLink 
+                exact to='/faq' 
+                activeClassName='active' 
+                className={styles.navlink}>
+                FAQ
+              </NavLink>
+            </nav>
           </header>
         </Container>
       </div>

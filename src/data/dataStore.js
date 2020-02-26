@@ -20,8 +20,8 @@ export const settings = {
 };
 
 export const pageContents = {
-  title: 'To Do, Doing, Done App',
-  subtitle: 'Your alternative to memory',
+  title: 'To Do... Doing... Done!',
+  subtitle: 'App alternative to your memory',
 };
 
 export const infoContents = {

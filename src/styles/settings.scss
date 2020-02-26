@@ -1,3 +1,5 @@
+/* Variables */
+
 $color-light: #fff;
 $color-dark: #2f3542;
 $color-medium: #3c40c6;
@@ -10,3 +12,30 @@ $font-text: 'Poppins', sans-serif;
 $radius: 5px;
 $base-size: 12px;
 $transition: all 0.5s;
+
+/* Mixins */
+
+@mixin flex($flex-direction, $justify-content, $align-items ) {
+  display: flex;
+  flex-direction: $flex-direction;
+  align-items: $align-items;
+  justify-content: $justify-content;
+}
+  
+@mixin breakpoint($point) {
+  @if $point == desktop {
+    @media (max-width: 70em) { @content ; }
+  }
+  @else if $point == laptop {
+    @media (max-width: 64em) { @content ; }
+  }
+  @else if $point == tablet {
+    @media (max-width: 50em) { @content ; }
+  }
+  @else if $point == phablet {
+    @media (max-width: 35.5em)  { @content ; }
+  }
+  @else if $point == mobileonly {
+    @media (max-width: 35.5em)  { @content ; }
+  }
+  }

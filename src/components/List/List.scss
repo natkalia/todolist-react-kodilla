@@ -10,23 +10,20 @@
 }
 
 .columns {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  @include flex(row, center, space-between);
+  
+  @include breakpoint(mobileonly) {
+    @include flex(column, center, center);
+  } 
 }
 
 .creator {
   width: 30%;
   margin: $base-size auto;
-}
-
-@media (max-width: 767px) {
-
-  .columns {
-    flex-direction: column;
-  }
-
-  .creator {
-    width: 100%;
+  
+  @include breakpoint(mobileonly) {
+    width: 90%;
   }
 }
+
+
