@@ -9,6 +9,7 @@ To-Do List app created as exercise for Web Developer Bootcamp in Kodilla (Module
 ## Setup
 
 **Live on Heroku:** [https://list-react-redux.herokuapp.com/](https://list-react-redux.herokuapp.com/)
+Currently there is a problem with images in deployed app, I am working on fixing it.
 
 **Repository**: https://github.com/natkalia/todolist-react-kodilla.git
 
@@ -45,6 +46,7 @@ this list will be shown (add also All button on main page to show all lists agai
 - [ ] add hamburger for RWD in navigation
 - [ ] fix buttons in creator for RWD
 - [ ] fix problem with buttons apperance that is now based on opacity
+- [ ] fix problem with images on heroku
 
 ## Project status
 In progress.
