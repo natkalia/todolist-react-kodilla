@@ -7,7 +7,6 @@ const baseConfig = () => ({
   entry: './src/index.js',
   output: {
     path: path.join(__dirname, 'docs'),
-    publicPath: '/',
     filename: 'scripts_bundle.js',
   },
   devServer: {
