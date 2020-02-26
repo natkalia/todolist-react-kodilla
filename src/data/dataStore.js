@@ -1,9 +1,9 @@
-import defaultImage from '../assets/image-from-rawpixel-id-409066-jpeg.jpg';
-import imageListOne from '../assets/image-from-rawpixel-id-408945-jpeg.jpg';
-import imageListTwo from '../assets/image-from-rawpixel-id-409017-jpeg.jpg';
-import imageListThree from '../assets/image-from-rawpixel-id-409037-jpeg.jpg';
-import imageInfo from '../assets/image-from-rawpixel-id-478002-jpeg.jpg';
-import imageFaq from '../assets/image-from-rawpixel-id-881777-original.jpg';
+import defaultImage from './img/image-from-rawpixel-id-409066-jpeg.jpg';
+import imageListOne from '../img/image-from-rawpixel-id-408945-jpeg.jpg';
+import imageListTwo from '../img/image-from-rawpixel-id-409017-jpeg.jpg';
+import imageListThree from '../img/image-from-rawpixel-id-409037-jpeg.jpg';
+import imageInfo from '../img/image-from-rawpixel-id-478002-jpeg.jpg';
+import imageFaq from '../img/image-from-rawpixel-id-881777-original.jpg';
 
 export const settings = {
   listCreatorText: 'Add new list...',
