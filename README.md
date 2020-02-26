@@ -3,18 +3,48 @@ To-Do List app created as exercise for Web Developer Bootcamp in Kodilla (Module
 
 ## Teaser
 
-Coming soon.
+![view-1](https://user-images.githubusercontent.com/49140572/75342599-06772900-5897-11ea-833e-07639c0b1e4d.PNG)
+![view-2](https://user-images.githubusercontent.com/49140572/75342600-07a85600-5897-11ea-8d00-bf50a8f6fcc4.PNG)
 
 ## Setup
 
-Coming soon.
+**Live on Heroku:** [https://list-react-redux.herokuapp.com/](https://list-react-redux.herokuapp.com/)
 
-## Technologies
+**Repository**: https://github.com/natkalia/todolist-react-kodilla.git
 
-Coming soon.
+You can also **download a zip archive** or a **clone repository** from github page:
+```bash
+git clone https://github.com/natkalia/todolist-react-kodilla.git
+```
+More info about launch/installation coming soon.
+
+## Technologies/tools
+
+Project is created with:
+* HTML
+* Sass for CSS
+* Javascript (ES6)
+* React
+* Redux
+* deployment on Heroku with http-server package
+* Webpack
+
+## Clean code
+
+Description of linters coming soon.
 
 ## Todo
-- [ ] add a component, which by default will only display the menu button (hamburger), and when clicked, will show a drop-down menu containing all the lists and columns currently available in the app
+- [ ] add a component, which by default will only display the menu button (hamburger), and when clicked, will show a drop-down menu containing all the lists currently available in the app, and after clicking one list only 
+this list will be shown (add also All button on main page to show all lists again)
+- [ ] refactor class to function components where possible
+- [ ] add new component for search results, showing one list with all found cards together (but with info about list/column location)
+- [ ] add drag-and-drop feature for moving cards in and between columns
+- [ ] add drag-and-drop feature for moving columns in and between lists
+- [ ] add possibility to provide description and url with image when adding new list
+- [ ] add simple animation for apperance of 'To do... doing... done!' in splash
+- [ ] add hamburger for RWD in navigation
+- [ ] fix buttons in creator for RWD
+- [ ] fix problem with buttons apperance that is now based on opacity
 
 ## Project status
 In progress.

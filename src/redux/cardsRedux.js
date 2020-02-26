@@ -10,6 +10,12 @@ export const getCardsForColumn =
     cards.filter(card => 
       ((card.columnId == columnId) && (new RegExp(searchString, 'i').test(card.title))));
 
+/* TODO: selector for search feature */
+export const getCardsForSearchResults =
+  (cards, searchString) =>
+    cards.filter(card => 
+      ((new RegExp(searchString, 'i').test(card.title))));
+
 // action name creator e.g. app/cards/ADD_CARD
 const reducerName = 'cards';
 const createActionName = name => `app/${reducerName}/${name}`; 

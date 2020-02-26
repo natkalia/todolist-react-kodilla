@@ -1,52 +1,30 @@
 import React from 'react';
-import styles from './App.scss';
+import Home from '../Home/HomeContainer';
+import Info from '../Info/Info';
+import {BrowserRouter, Route} from 'react-router-dom';
+import MainLayout from '../MainLayout/MainLayout';
+import Faq from '../Faq/Faq';
+import {AnimatedSwitch} from 'react-router-transition';
+import styles from '../App/App.scss';
 import List from '../List/ListContainer';
-import PropTypes from 'prop-types';
-import Creator from '../Creator/Creator';
-import {settings} from '../../data/dataStore';
-import Search from '../Search/SearchContainer';
+import SearchResults from '../SearchResults/SearchResultsContainer.js';
 
-class App extends React.Component {
-  /* typechecking on the props for a component with prop-types library*/
-  static propTypes = {
-    title: PropTypes.node,
-    subtitle: PropTypes.node,
-    lists: PropTypes.array,
-    addList: PropTypes.func,
-    description: PropTypes.string,
-    image: PropTypes.string,
-  }
-
-  /* default value of prop if prop not provided */
-  static defaultProps = {
-    description: settings.defaultListDescription,
-    image: settings.defaultListImage, 
-  }
-    
-  render() {
-    const {title, subtitle, lists, addList} = this.props;
-    return (
-      <main className={styles.component}>
-
-        <h1 className={styles.title}>{title}</h1>
-        <h2 className={styles.subtitle}>{subtitle}</h2>
-        <Search/>
-
-        <div className={styles.creator}>
-          <Creator 
-            text={settings.listCreatorText} 
-            action={title => addList(title)}
-            // action={addList}
-          />
-        </div>
-
-        {lists.map(listData => (
-          <List key={listData.id} {...listData} />
-        ))}
-
-      </main>
-    );
-  }
-}
+const App = () => (
+  <BrowserRouter>
+    <MainLayout>
+      <AnimatedSwitch atEnter={{ opacity: 0 }}
+        atLeave={{ opacity: 0 }}
+        atActive={{ opacity: 1 }}
+        className={styles.switchWrapper}
+      >
+        <Route exact path='/' component={Home} />
+        <Route exact path='/info' component={Info} />
+        <Route exact path='/faq' component={Faq} />
+        <Route exact path="/list/:id" component={List} />
+        <Route exact path="/search/:id" component={SearchResults} />
+      </AnimatedSwitch>
+    </MainLayout>
+  </BrowserRouter>
+);
 
 export default App;

@@ -1,0 +1,32 @@
+@import '../../styles/settings.scss';
+
+.component {
+  position: relative;
+  min-height: ($base-size * 15);
+  background: lighten($color-dark, 60%);
+  margin: ($base-size * 2) 0;
+  border-radius: $radius;
+}
+
+.title {
+  padding: $base-size;
+  text-align: center;
+  font-size: ($base-size * 3);
+  text-transform: uppercase;
+}
+
+.subtitle {
+  padding: $base-size;
+  text-align: center;
+  font-size: ($base-size * 2);
+  font-style: italic;
+  font-weight: normal;
+}
+
+.creator {
+  width: 36%;
+  margin: $base-size auto;
+  @include breakpoint(mobileonly) {
+    width: 56%;
+  } 
+}
