@@ -1,3 +1,10 @@
+import defaultImage from '../assets/image-from-rawpixel-id-409066-jpeg.jpg';
+import imageListOne from '../assets/image-from-rawpixel-id-408945-jpeg.jpg';
+import imageListTwo from '../assets/image-from-rawpixel-id-409017-jpeg.jpg';
+import imageListThree from '../assets/image-from-rawpixel-id-409037-jpeg.jpg';
+import imageInfo from '../assets/image-from-rawpixel-id-478002-jpeg.jpg';
+import imageFaq from '../assets/image-from-rawpixel-id-881777-original.jpg';
+
 export const settings = {
   listCreatorText: 'Add new list...',
   columnCreatorText: 'Add new column...',
@@ -15,7 +22,7 @@ export const settings = {
     icon: 'search',
   },
   defaultListDescription: '<p>I can do all the things!!!</p>',
-  defaultListImage: '../src/assets/image-from-rawpixel-id-409066-jpeg.jpg',
+  defaultListImage: defaultImage,
   defaultColumnIcon: 'list-alt',
 };
 
@@ -26,13 +33,13 @@ export const pageContents = {
 
 export const infoContents = {
   titleInfo: 'Information',
-  imageInfo: '../src/assets/image-from-rawpixel-id-478002-jpeg.jpg',
+  imageInfo: imageInfo,
   contentInfo: 'A task list (also called a to-do list or things-to-do) is a list of tasks to be completed such as chores or steps toward completing a project. It is an inventory tool which serves as an alternative or supplement to memory',
 };
 
 export const faqContents = {
   titleFaq: 'Frequently Asked Questions',
-  imageFaq: '../src/assets/image-from-rawpixel-id-881777-original.jpg',
+  imageFaq: imageFaq,
   contentFaq: 'A FAQ is a list of frequently asked questions (FAQs) and answers on a particular topic (also known as Questions and Answers or Frequently Answered Questions).',
 };
 
@@ -41,19 +48,19 @@ const lists = [
     id: 'list-1',
     title: 'Shopping list',
     description: 'List for food shopping',
-    image: '../src/assets/image-from-rawpixel-id-408945-jpeg.jpg',
+    image: imageListOne,
   },
   {
     id: 'list-2',
     title: 'For work',
     description: 'My tasks for next week at work',
-    image: '../src/assets/image-from-rawpixel-id-409017-jpeg.jpg', 
+    image: imageListTwo, 
   },
   {
     id: 'list-3',
     title: 'Movies to watch',
     description: 'List of movies to watch',
-    image: '../src/assets/image-from-rawpixel-id-409037-jpeg.jpg',
+    image: imageListThree,
   },
 ];
 

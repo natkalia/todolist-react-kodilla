@@ -48,6 +48,12 @@ const devConfig = () => ({
           'sass-loader',
         ],
       },
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        use: [
+          'file-loader',
+        ],
+      },
     ],
   },
 });
@@ -67,6 +73,12 @@ const prodConfig = () => ({
             },
           }, 
           'sass-loader',
+        ],
+      },
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        use: [
+          'file-loader',
         ],
       },
     ],
