@@ -3,7 +3,8 @@ To-Do List app created as exercise for Web Developer Bootcamp in Kodilla (Module
 
 ## Teaser
 
-Coming soon.
+![view-1](https://user-images.githubusercontent.com/49140572/75342599-06772900-5897-11ea-833e-07639c0b1e4d.PNG)
+![view-2](https://user-images.githubusercontent.com/49140572/75342600-07a85600-5897-11ea-8d00-bf50a8f6fcc4.PNG)
 
 ## Setup
 
@@ -39,6 +40,11 @@ this list will be shown (add also All button on main page to show all lists agai
 - [ ] add new component for search results, showing one list with all found cards together (but with info about list/column location)
 - [ ] add drag-and-drop feature for moving cards in and between columns
 - [ ] add drag-and-drop feature for moving columns in and between lists
+- [ ] add possibility to provide description and url with image when adding new list
+- [ ] add simple animation for apperance of 'To do... doing... done!' in splash
+- [ ] add hamburger for RWD in navigation
+- [ ] fix buttons in creator for RWD
+- [ ] fix problem with buttons apperance that is now based on opacity
 
 ## Project status
 In progress.
