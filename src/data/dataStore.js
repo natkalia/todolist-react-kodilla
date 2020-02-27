@@ -1,11 +1,9 @@
 import defaultImage from '../img/image-from-rawpixel-id-409066-jpeg.jpg';
 import imageInfo from '../img/image-from-rawpixel-id-478002-jpeg.jpg';
 import imageFaq from '../img/image-from-rawpixel-id-881777-original.jpg';
-
-// TODO: update webpack to use file loader
-// import imageListOne from '../img/image-from-rawpixel-id-408945-jpeg.jpg';
-// import imageListTwo from '../img/image-from-rawpixel-id-409017-jpeg.jpg';
-// import imageListThree from '../img/image-from-rawpixel-id-409037-jpeg.jpg';
+import imageListOne from '../img/image-from-rawpixel-id-408945-jpeg.jpg';
+import imageListTwo from '../img/image-from-rawpixel-id-409017-jpeg.jpg';
+import imageListThree from '../img/image-from-rawpixel-id-409037-jpeg.jpg';
 
 export const settings = {
   listCreatorText: 'Add new list...',
@@ -50,19 +48,19 @@ const lists = [
     id: 'list-1',
     title: 'Shopping list',
     description: 'List for food shopping',
-    image: '../src/img/image-from-rawpixel-id-408945-jpeg.jpg',
+    image: imageListOne,
   },
   {
     id: 'list-2',
     title: 'For work',
     description: 'My tasks for next week at work',
-    image: '../src/img/image-from-rawpixel-id-409017-jpeg.jpg',
+    image: imageListTwo,
   },
   {
     id: 'list-3',
     title: 'Movies to watch',
     description: 'List of movies to watch',
-    image: '../src/img/image-from-rawpixel-id-409037-jpeg.jpg',
+    image: imageListThree,
   },
 ];
 
