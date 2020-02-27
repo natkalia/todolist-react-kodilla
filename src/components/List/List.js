@@ -33,8 +33,8 @@ class List extends React.Component {
         <Container>
 
           <Hero 
-            titleText={title}
-            imageSource={image}
+            title={title}
+            image={image}
           />
 
           <div className={styles.description}>

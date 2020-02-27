@@ -46,7 +46,7 @@ this list will be shown (add also All button on main page to show all lists agai
 - [ ] add hamburger for RWD in navigation
 - [ ] fix buttons in creator for RWD
 - [ ] fix problem with buttons apperance that is now based on opacity
-- [x] fix problem with images on heroku
+- [ ] update webpack and dataStore for context/output paths to work for lists images
 - [ ] fix problem with routing on heroku (when refreshing or using browser navigation)
 
 ## Project status

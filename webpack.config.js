@@ -50,7 +50,13 @@ const devConfig = () => ({
       {
         test: /\.(png|svg|jpg|gif)$/,
         use: [
-          'file-loader',
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              // TODO: update context/output paths to work for lists images
+            }
+          }
         ],
       },
     ],

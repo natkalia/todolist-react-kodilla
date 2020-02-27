@@ -6,8 +6,8 @@ import Hero from '../Hero/Hero';
 const Faq = () => (
   <Container>
     <Hero 
-      titleText={faqContents.titleFaq}
-      imageSource={faqContents.imageFaq}
+      title={faqContents.titleFaq}
+      image={faqContents.imageFaq}
     />
     <p>{faqContents.contentFaq}</p>
   </Container>
