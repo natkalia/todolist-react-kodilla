@@ -8,6 +8,7 @@ const baseConfig = () => ({
   output: {
     path: path.resolve(__dirname, 'docs'),
     filename: 'scripts_bundle.js',
+    publicPath: '/',
   },
   devServer: {
     historyApiFallback: true,
