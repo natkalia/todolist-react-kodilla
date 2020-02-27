@@ -6,7 +6,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const baseConfig = () => ({
   entry: './src/index.js',
   output: {
-    path: path.join(__dirname, 'docs'),
+    path: path.resolve(__dirname, 'docs'),
     filename: 'scripts_bundle.js',
   },
   devServer: {
@@ -54,7 +54,8 @@ const devConfig = () => ({
             loader: 'file-loader',
             options: {
               name: '[name].[ext]',
-              // TODO: update context/output paths to work for lists images
+              outputPath: 'img/',
+              publicPath: '../img/',
             }
           }
         ],
