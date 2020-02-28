@@ -30,7 +30,6 @@ class Search extends React.Component {
       value: event.target.value,
       visibleButtons: event.target.value.length > 0,
     });
-    
   }
 
   handleOK(){
@@ -47,6 +46,8 @@ class Search extends React.Component {
     const {text, countVisible, countAll} = this.props;
     const {value} = this.state;
     const {icon} = settings.search;
+    const {pathname} = this.props.history.location;
+    console.log(pathname.includes('search'));
     return (
       <div className={styles.component}>
         <Container>
@@ -63,8 +64,12 @@ class Search extends React.Component {
                 <Icon name={icon} />
               </Button>
             </div>
-            <div>
-              { countVisible == countAll ? '' : `${countVisible} / ${countAll}` }
+            <div className={styles.count}>
+              {pathname.includes('search') ? (
+                <span>
+                  {countVisible == countAll ? '' : `${countVisible} / ${countAll}`}
+                </span>
+              ) : (null)}            
             </div>
           </div>
         </Container>

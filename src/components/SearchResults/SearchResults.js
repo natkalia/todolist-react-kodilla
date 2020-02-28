@@ -18,10 +18,19 @@ class SearchResults extends React.Component {
     return (
       <section className={styles.component}>
         <Container>
-          <div className={styles.cards}>
-            {cards.map(cardData => (
-              <Card key={cardData.id} {...cardData} />
-            ))}
+          <div>
+            {cards.length > 0 ? (
+              <div>
+                <h2 className={styles.intro}>Cards found!</h2>
+                <div className={styles.cards}>
+                  {cards.map(cardData => (
+                    <Card key={cardData.id} {...cardData} />
+                  ))}
+                </div>
+              </div>
+            ) : (
+              <h2 className={styles.intro}>Cards not found!</h2>
+            )}
           </div>       
         </Container>
       </section>
