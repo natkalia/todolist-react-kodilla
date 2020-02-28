@@ -8,10 +8,13 @@ class SearchResults extends React.Component {
 
   static propTypes = {
     cards: PropTypes.array,
+    searchString: PropTypes.string,
+    changeSearchString: PropTypes.func,
   }
 
   render() {
     const {cards} = this.props;
+    this.props.changeSearchString(this.props.searchString);
     return (
       <section className={styles.component}>
         <Container>

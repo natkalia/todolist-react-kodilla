@@ -8,35 +8,36 @@ import Container from '../Container/Container';
 import {withRouter} from 'react-router';
 
 class Search extends React.Component {
+  
   static propTypes = {
     text: PropTypes.string,
     searchString: PropTypes.string,
-    changeSearchString: PropTypes.func,
     countVisible: PropTypes.number,
     countAll: PropTypes.number,
     history: PropTypes.object,
   }
-
+  
   static defaultProps = {
     text: settings.search.defaultText,
   }
-
+  
   state = {
     value: this.props.searchString,
   }
-
+  
   handleChange(event){
     this.setState({
       value: event.target.value,
       visibleButtons: event.target.value.length > 0,
     });
+    
   }
 
   handleOK(){
     this.props.history.push(`/search/${this.state.value}`);
   }
 
-  componentDidUpdate(prevProps){
+  componentDidUpdate(prevProps) {
     if(this.props.searchString != prevProps.searchString){
       this.setState({value: this.props.searchString});
     }
@@ -57,7 +58,10 @@ class Search extends React.Component {
               onChange={event => this.handleChange(event)}
             />
             <div className={styles.buttons}>
-              <Button onClick={() => this.handleOK()}><Icon name={icon} /></Button>
+              <Button onClick={() => 
+                this.handleOK()}>
+                <Icon name={icon} />
+              </Button>
             </div>
             <div>
               { countVisible == countAll ? '' : `${countVisible} / ${countAll}` }
