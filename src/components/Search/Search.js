@@ -47,7 +47,6 @@ class Search extends React.Component {
     const {value} = this.state;
     const {icon} = settings.search;
     const {pathname} = this.props.history.location;
-    console.log(pathname.includes('search'));
     return (
       <div className={styles.component}>
         <Container>

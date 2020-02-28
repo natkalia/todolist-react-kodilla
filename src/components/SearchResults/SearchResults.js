@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from '../SearchResults/SearchResults.scss';
-import Card from '../Card/Card.js';
-import Container from '../Container/Container.js';
+import Card from '../Card/CardContainer';
+import Container from '../Container/Container';
 import PropTypes from 'prop-types';
 
 class SearchResults extends React.Component {
@@ -24,7 +24,7 @@ class SearchResults extends React.Component {
                 <h2 className={styles.intro}>Cards found!</h2>
                 <div className={styles.cards}>
                   {cards.map(cardData => (
-                    <Card key={cardData.id} {...cardData} />
+                    <Card key={cardData.id} {...cardData}/>
                   ))}
                 </div>
               </div>
