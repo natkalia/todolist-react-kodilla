@@ -11,6 +11,7 @@
 
 .columns {
   @include flex(row, center, space-between);
+  flex-wrap: wrap;
   
   @include breakpoint(mobileonly) {
     @include flex(column, center, center);
