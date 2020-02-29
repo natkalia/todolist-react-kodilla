@@ -6,6 +6,7 @@
   background: lighten($color-dark, 60%);
   margin: ($base-size * 2) 0;
   border-radius: $radius;
+  padding: $base-size;
 }
 
 .title {
@@ -13,6 +14,11 @@
   text-align: center;
   font-size: ($base-size * 3);
   text-transform: uppercase;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  animation: 
+    typing 7s steps(50, end);
 }
 
 .subtitle {
@@ -29,4 +35,9 @@
   @include breakpoint(mobileonly) {
     width: 56%;
   } 
+}
+
+@keyframes typing { 
+  from { width: 0 }
+  to { width: 100% }
 }
