@@ -49,6 +49,10 @@ Description of linters coming soon.
 - [ ] fix problem with routing on heroku (when refreshing or using browser navigation)
 - [ ] fix bug with cards in columns (list subpage) - not properly showing, problem with adding new cards, but only after a search was performed
 - [ ] fix bug with inputs that sometimes become kind of disabled for few seconds, without clear reason
+- [ ] refactor SearchResult to show name of list/column next to link to list (link is already provided)
+- [ ] refactor List view so that cards that were searched for lately, will have a different color, so that
+these cards could be found easier after user is redirected from SearchResults 
+- [ ] refactor search feature so that it would also check if searchString is included in list or column name, and add relevant cards with links to SearchResults
  
 ## Project status
 In progress.
