@@ -1,0 +1,9 @@
+@import '../../styles/settings.scss';
+
+.component {
+  color: $color-dark;
+
+  a:visited, a:active {
+    color: $color-dark;
+  }
+}

@@ -7,8 +7,11 @@
   padding: $base-size;
   margin: 0 0 $base-size 0;
   border-radius: $radius;
-}
+  
+  @include flex(row, space-between, center);
 
-.source{
-  font-size: $base-size;
+  @include breakpoint(mobileonly) {
+    @include flex(column, center, center);
+    width: 90%;
+  } 
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './Card.scss';
 import PropTypes from 'prop-types';
 import {withRouter} from 'react-router';
+import CardLink from '../CardLink/CardLink';
 
 class Card extends React.Component {
 
@@ -16,30 +17,14 @@ class Card extends React.Component {
     const {title, columns, columnId} = this.props;
     const {pathname} = this.props.history.location;
     
-    const filteredColumns = columns.filter(column => 
-      column.id == columnId ? column : null);
-    
     return (
       <section className={styles.component}>
         <span>{title} </span>
         
-        <span className={styles.source}>
-          {pathname.includes('search') ? (
-
-            filteredColumns.map(column => 
-              column.id == columnId ? 
-                (
-                  <span  
-                    key={column.id}>
-                    ({column.listId}) 
-                    ({column.id})  
-                  </span>) :
-                null
-            )
-            
+        {pathname.includes('search') ? 
+          (<CardLink columns={columns} columnId={columnId}/>
           ) : (null)}            
-        </span>
-
+        
       </section>
     );
   }
