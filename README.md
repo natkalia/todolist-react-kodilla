@@ -34,21 +34,22 @@ Project is created with:
 
 Description of linters coming soon.
 
-## Todo
-- [ ] add a component, which by default will only display the menu button (hamburger), and when clicked, will show a drop-down menu containing all the lists currently available in the app, and after clicking one list only 
-this list will be shown (add also All button on main page to show all lists again)
+## Todo / known bugs
+- [ ] add a component, which by default will only display the menu button (hamburger), and when clicked, will show a drop-down menu containing all the lists currently available in the app, and after clicking one list only this list will be shown (add also All button on main page to show all lists again)
 - [ ] refactor class to function components where possible
-- [ ] add new component for search results, showing one list with all found cards together (but with info about list/column location)
+- [x] add new component for search results, showing one list with all found cards together (but with link to list location)
 - [ ] add drag-and-drop feature for moving cards in and between columns
 - [ ] add drag-and-drop feature for moving columns in and between lists
 - [ ] add possibility to provide description and url with image when adding new list
-- [ ] add simple animation for apperance of 'To do... doing... done!' in splash
+- [x] add simple animation for apperance of 'To do... doing... done!' in splash
 - [ ] add hamburger for RWD in navigation
 - [ ] fix buttons in creator for RWD
 - [ ] fix problem with buttons apperance that is now based on opacity
-- [ ] update webpack and dataStore for context/output paths to work for lists images
+- [x] update webpack and dataStore for context/output paths to work for lists images
 - [ ] fix problem with routing on heroku (when refreshing or using browser navigation)
-
+- [ ] fix bug with cards in columns (list subpage) - not properly showing, problem with adding new cards, but only after a search was performed
+- [ ] fix bug with inputs that sometimes become kind of disabled for few seconds, without clear reason
+ 
 ## Project status
 In progress.
 
