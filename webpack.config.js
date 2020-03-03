@@ -11,6 +11,7 @@ const baseConfig = () => ({
     publicPath: '/',
   },
   devServer: {
+    contentBase: path.resolve(__dirname, 'docs'),
     historyApiFallback: true,
   },
   module: {
