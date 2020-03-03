@@ -19,10 +19,10 @@ const App = () => (
         className={styles.switchWrapper}
       >
         <Route exact path='/' component={Home} />
-        <Route exact path='#/info' component={Info} />
-        <Route exact path='#/faq' component={Faq} />
-        <Route exact path='#/list/:id' component={List} />
-        <Route exact path='#/search/:id' component={SearchResults} />
+        <Route exact path='/info' component={Info} />
+        <Route exact path='/faq' component={Faq} />
+        <Route exact path='/list/:id' component={List} />
+        <Route exact path='/search/:id' component={SearchResults} />
         <Route path='*' component={NotFound} />
 
       </AnimatedSwitch>
