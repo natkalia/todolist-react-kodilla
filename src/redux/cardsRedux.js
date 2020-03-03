@@ -2,15 +2,13 @@ import shortid from 'shortid';
 
 // selectors
 
-/* function getCardsForColumn to filter cards so that only 
-those with proper id and including searchString are shown on column
-function used in ColumnContainer */
+/* select used in ColumnContainer */
 export const getCardsForColumn =
-  ({cards, searchString}, columnId) => 
+  ({cards}, columnId) => 
     cards.filter(card => 
-      ((card.columnId == columnId) && (new RegExp(searchString, 'i').test(card.title))));
+      ((card.columnId == columnId)));
 
-/* TODO: selector for search feature */
+/* selector for search feature */
 export const getCardsForSearchResults =
   (cards, searchString) =>
     cards.filter(card => 
