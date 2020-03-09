@@ -15,16 +15,14 @@ class Splash extends React.Component {
   render() {
     const {title, subtitle, addList} = this.props;
     return (
-      <div>
-        <div className={styles.component}>
-          <h1 className={styles.title}>{title}</h1>
-          <h2 className={styles.subtitle}>{subtitle}</h2>
-          <div className={styles.creator}>
-            <Creator 
-              text={settings.listCreatorText} 
-              action={title => addList(title)}/>   
-          </div>  
-        </div>
+      <div className={styles.component}>
+        <h1 className={styles.title}>{title}</h1>
+        <h2 className={styles.subtitle}>{subtitle}</h2>
+        <div className={styles.creator}>
+          <Creator 
+            text={settings.listCreatorText} 
+            action={title => addList(title)}/>   
+        </div>  
       </div>
     );
   }
