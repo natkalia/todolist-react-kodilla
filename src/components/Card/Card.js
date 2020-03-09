@@ -20,10 +20,10 @@ class Card extends React.Component {
     return (
       <section className={styles.component}>
         <span>{title} </span>
-        
-        {pathname.includes('search') ? 
-          (<CardLink columns={columns} columnId={columnId}/>
-          ) : (null)}            
+
+        {pathname.includes('search') &&
+          <CardLink columns={columns} columnId={columnId}/>
+        }        
         
       </section>
     );
