@@ -3,6 +3,7 @@ import styles from './Card.scss';
 import PropTypes from 'prop-types';
 import {withRouter} from 'react-router';
 import CardLink from '../CardLink/CardLink';
+import Icon from '../Icon/Icon';
 
 class Card extends React.Component {
 
@@ -19,7 +20,11 @@ class Card extends React.Component {
     
     return (
       <section className={styles.component}>
-        <span>{title} </span>
+        <span>{title}</span>
+        <span>
+          <a  className={styles.edit} href="#"><Icon name='edit'/></a>
+          <a className={styles.delete} href="#"><Icon name='trash'/></a>
+        </span>
 
         {pathname.includes('search') &&
           <CardLink columns={columns} columnId={columnId}/>

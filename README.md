@@ -53,6 +53,7 @@ Description of linters coming soon.
 - [ ] refactor List view so that cards that were searched for lately, will have a different color, so that
 these cards could be found easier after user is redirected from SearchResults 
 - [ ] refactor search feature so that it would also check if searchString is included in list or column name, and add relevant cards with links to SearchResults
+- [ ] add possibility to delete and edit text on Card [IN PROGRESS, icons already added]
  
 ## Project status
 In progress.
