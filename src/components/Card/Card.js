@@ -11,19 +11,31 @@ class Card extends React.Component {
     title: PropTypes.string,
     columnId: PropTypes.string,
     columns: PropTypes.array, 
-    history: PropTypes.object,   
+    history: PropTypes.object, 
+    deleteCard: PropTypes.func,
+    id: PropTypes.string,
+  }
+
+  handleClickDelete (deleteCard, cardId) {
+    deleteCard(cardId);
   }
 
   render() {
-    const {title, columns, columnId} = this.props;
+    const {title, columns, columnId, deleteCard, id} = this.props;
     const {pathname} = this.props.history.location;
     
     return (
       <section className={styles.component}>
         <span>{title}</span>
         <span>
-          <a  className={styles.edit} href="#"><Icon name='edit'/></a>
-          <a className={styles.delete} href="#"><Icon name='trash'/></a>
+          <a className={styles.edit} href="#">
+            <Icon name='edit'/>
+          </a>
+          <a
+            className={styles.delete} 
+            onClick={() => this.handleClickDelete(deleteCard, id)}>
+            <Icon name='trash' />
+          </a>
         </span>
 
         {pathname.includes('search') &&
