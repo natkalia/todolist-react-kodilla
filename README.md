@@ -57,7 +57,7 @@ these cards could be found easier after user is redirected from SearchResults
 - [ ] add possibility to edit text on Card (icons already added)
 - [ ] add possibility to delete Column
 - [x] add possibility to delete List
-- [ ] if user clicks on margin of ListLink, link is active - should be refactored
+- [x] if user clicks on margin of ListLink, link is active - should be refactored
   
 ## Project status
 In progress.

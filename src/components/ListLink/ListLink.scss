@@ -1,8 +1,12 @@
 @import '../../styles/settings.scss';
 
+
 .link {
   text-decoration: none;
+  margin: 0 auto;
+  width: 70%;
   color: $color-dark;
+  @include flex(row, center, center);
 }
 
 .component {
@@ -26,8 +30,6 @@
     width: 90%;
   } 
    
-  width: 50%;
-  margin: 0 auto $base-size;
   background: $color-light;
   margin-bottom: $base-size;
   border-radius: $radius;
