@@ -15,17 +15,28 @@
     width: 100%;
   }
 
+  .cardWrapper {
+    flex: 20%;
+    @include flex(row, space-between, center);
+  }
+
   span {
     margin: $base-size/2 0;
+  }
+
+  .title {
+    flex: 40%;
+  }
+
+  .icons {
+    @include flex(row, flex-end, center);
+    flex-wrap: nowrap;
   }
   
   .delete, .edit {
     text-decoration: none;
     margin: $base-size $base-size/1.5;
-  }
-
-  a:hover{
-    cursor: pointer;
+    flex: 30%;
   }
 
   .delete:hover, .edit:hover {

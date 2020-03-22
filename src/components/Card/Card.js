@@ -33,19 +33,21 @@ class Card extends React.Component {
     
     return (
       <section className={styles.component}>
-        <span>{title}</span>
-        <span>
-          <a 
-            className={styles.edit}
-            onClick={() => this.handleEditCard()}>
-            <Icon name='edit'/>
-          </a>
-          <a
-            className={styles.delete} 
-            onClick={() => this.handleClickDelete(deleteCard, id)}>
-            <Icon name='trash' />
-          </a>
-        </span>
+        <div className={styles.cardWrapper}>
+          <span className={styles.title}>{title}</span>
+          <div className={styles.icons}>
+            <span
+              className={styles.edit}
+              onClick={() => this.handleEditCard()}>
+              <Icon name='edit'/>
+            </span>
+            <span
+              className={styles.delete} 
+              onClick={() => this.handleClickDelete(deleteCard, id)}>
+              <Icon name='trash' />
+            </span>
+          </div>
+        </div>
 
         {pathname.includes('search') &&
           <CardLink columns={columns} columnId={columnId}/>
