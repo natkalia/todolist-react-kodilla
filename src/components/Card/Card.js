@@ -16,8 +16,13 @@ class Card extends React.Component {
     id: PropTypes.string,
   }
 
-  handleClickDelete (deleteCard, cardId) {
+  handleClickDelete(deleteCard, cardId) {
     deleteCard(cardId);
+  }
+
+  handleEditCard() {
+    // console.log('from handleEditCard in Card');
+    alert('Sorry, this feature is in progress and not yet available!');
   }
 
   render() {
@@ -28,7 +33,9 @@ class Card extends React.Component {
       <section className={styles.component}>
         <span>{title}</span>
         <span>
-          <a className={styles.edit} href="#">
+          <a 
+            className={styles.edit}
+            onClick={() => this.handleEditCard()}>
             <Icon name='edit'/>
           </a>
           <a
