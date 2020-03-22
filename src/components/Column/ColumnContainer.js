@@ -1,6 +1,7 @@
 import {connect} from 'react-redux';
 import Column from './Column';
 import {createActionAddCard, getCardsForColumn} from '../../redux/cardsRedux';
+import {createActionDeleteColumn} from '../../redux/columnsRedux';
 
 /* use imported filtering function to compare id of cards and 
 corresponding column */
@@ -14,6 +15,7 @@ const mapDispatchToProps = (dispatch, props) => ({
     columnId: props.id,
     title,
   })),
+  deleteColumn: columnId => dispatch(createActionDeleteColumn(columnId)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Column);

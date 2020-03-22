@@ -7,44 +7,51 @@ import Icon from '../Icon/Icon';
 import {settings} from '../../data/dataStore';
 
 class Column extends React.Component {
-  /* typechecking on the props for a component with prop-types library*/
+
   static propTypes = {
     title: PropTypes.string.isRequired,
     cards: PropTypes.array,
     icon: PropTypes.string,
     addCard: PropTypes.func,
+    deleteColumn: PropTypes.func,
+    id: PropTypes.string,
   }
 
-  /* default value of prop if prop not provided */
   static defaultProps = {
     icon: settings.defaultColumnIcon,
   }
 
+  handleClickDeleteColumn(deleteColumn, columnId) {
+    deleteColumn(columnId);
+  }
+
   render() {
-    const {title, icon, cards, addCard} = this.props;
+    const {title, icon, cards, addCard, deleteColumn, id} = this.props;
+
     return (
       <section className={styles.component}>
         <h3 className={styles.title}>
           <span className={styles.icon}>
             <Icon name={icon}/>
           </span>
-          {title}
+          <span>{title}</span>
+          <span 
+            onClick = {() => this.handleClickDeleteColumn(deleteColumn, id)}
+            className={styles.delete}>
+            <Icon name='trash'/>
+          </span>
         </h3>
-
         <div className={styles.cards}>
           {cards.map(cardData => (
             <Card key={cardData.id} {...cardData} />
           ))}
         </div>
-
         <div className={styles.creator}>
           <Creator 
             text={settings.cardCreatorText} 
             action={title => addCard(title)}
-            // action={addCard}
           />
         </div> 
-          
       </section>
     );
   }

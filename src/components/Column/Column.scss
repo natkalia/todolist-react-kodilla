@@ -19,13 +19,26 @@
   text-align: center;
   font-size: ($base-size * 1.5);
   margin: 0 0 ($base-size * 1.5) 0;
+  @include flex(row, center, center);
 }
 
 .icon > * {
   padding-right: $base-size;
-  color: $color-warning;
+  color: lighten($color-medium, 5%);
   font-size: ($base-size * 2);
   vertical-align: middle;
+ }
+
+.delete > * {
+  padding-left: $base-size;
+  color: $color-dark;
+  font-size: ($base-size * 2);
+  vertical-align: middle;
+
+  &:hover {
+    cursor: pointer;
+    color: $color-warning;
+  }
 }
 
 @media (max-width: 767px) {
