@@ -22,12 +22,13 @@ class Column extends React.Component {
   }
 
   handleClickDeleteColumn(deleteColumn, columnId) {
-    deleteColumn(columnId);
+    if(confirm('Are you sure you want to delete this column?')) {
+      deleteColumn(columnId);
+    }
   }
 
   render() {
     const {title, icon, cards, addCard, deleteColumn, id} = this.props;
-
     return (
       <section className={styles.component}>
         <h3 className={styles.title}>
@@ -37,7 +38,7 @@ class Column extends React.Component {
           <span>{title}</span>
           <span 
             onClick = {() => this.handleClickDeleteColumn(deleteColumn, id)}
-            className={styles.delete}>
+            className={styles.trash}>
             <Icon name='trash'/>
           </span>
         </h3>

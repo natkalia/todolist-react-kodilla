@@ -69,11 +69,14 @@
   }
 }
 
-.trash {
+.trash > * {
   padding: $base-size;
   color: $color-dark;
+  font-size: ($base-size * 2);
+  vertical-align: middle;
 
   &:hover {
-    color: $color-warning; 
+    cursor: pointer;
+    color: $color-warning;
   }
 }

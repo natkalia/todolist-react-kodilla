@@ -42,7 +42,7 @@ class Card extends React.Component {
               <Icon name='edit'/>
             </span>
             <span
-              className={styles.delete} 
+              className={styles.trash} 
               onClick={() => this.handleClickDelete(deleteCard, id)}>
               <Icon name='trash' />
             </span>
