@@ -17,7 +17,9 @@ class Card extends React.Component {
   }
 
   handleClickDelete(deleteCard, cardId) {
-    deleteCard(cardId);
+    if (confirm('Are you sure you want to delete this card?')) {
+      deleteCard(cardId);
+    }
   }
 
   handleEditCard() {

@@ -66,3 +66,12 @@
     line-height: 1;
   }
 }
+
+.trash {
+  padding: $base-size;
+  color: $color-dark;
+
+  &:hover {
+    color: $color-warning; 
+  }
+}

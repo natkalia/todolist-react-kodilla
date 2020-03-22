@@ -1,9 +1,9 @@
 import React from 'react';
 import styles from './Home.scss';
-import ListLink from '../ListLink/ListLink.js';
+import ListLink from '../ListLink/ListLinkContainer';
 import PropTypes from 'prop-types';
-import Container from '../Container/Container.js';
-import Splash from '../Splash/Splash.js';
+import Container from '../Container/Container';
+import Splash from '../Splash/Splash';
 
 class Home extends React.Component {
   static propTypes = {
