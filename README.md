@@ -55,7 +55,8 @@ these cards could be found easier after user is redirected from SearchResults
 - [ ] refactor search feature so that it would also check if searchString is included in list or column name, and add relevant cards with links to SearchResults
 - [x] add possibility to delete text on Card
 - [x] add possibility to edit text on Card
-- [ ] add possibility to edit column name and list name
+- [x] add possibility to edit column name 
+- [ ] add possibility to edit list name
 - [x] add possibility to delete Column
 - [x] add possibility to delete List
 - [x] if user clicks on margin of ListLink, link is active - should be refactored
