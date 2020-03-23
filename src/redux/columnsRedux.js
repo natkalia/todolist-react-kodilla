@@ -29,24 +29,24 @@ export const createActionEditColumn =
   payload => ({ payload, type: EDIT_COLUMN });
 
 // reducer helper functions
-const filterColumns = (columns, columnId) => {
-  const filteredColumns = columns.filter((element) => 
+const filterColumns = (state, columnId) => {
+  let newState = [...state];
+  newState = newState.filter((element) => 
     element.id !== columnId
   );
-  return filteredColumns;
+  return newState;
 };
 
-const editColumns = (columns, payload) => {
-  const editedColumns = columns.map(element => {
-    if (element.id === payload.id) {
-      element.title = payload.title;
-      return element;
-    } else {
-      return element;
+const editColumn = (state, payload) => {
+  let newState = [...state];
+  newState.forEach((item, index, array) => {
+    if (array[index].id === payload.id) {
+      array[index] = {...payload};
     }
   });
-  return editedColumns;
+  return newState;
 };
+
 
 // reducer
 export default function reducer(state = [], action = {}) {
@@ -54,9 +54,9 @@ export default function reducer(state = [], action = {}) {
     case ADD_COLUMN:
       return [...state, action.payload];
     case DELETE_COLUMN:
-      return [...filterColumns(state, action.payload)];
+      return filterColumns(state, action.payload);
     case EDIT_COLUMN:
-      return [...editColumns(state, action.payload)];
+      return editColumn(state, action.payload);
     default:
       return state;
   }

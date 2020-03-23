@@ -19,11 +19,12 @@ export const createActionDeleteList =
     ({payload, type: DELETE_LIST});
 
 // reducer helper functions
-const filterLists = (lists, listId) => {
-  const filteredLists = lists.filter((element) => 
-    (element.id !== listId)
+const filterLists = (state, listId) => {
+  let newState = [...state];
+  newState = newState.filter((element) => 
+    element.id !== listId
   );
-  return filteredLists;
+  return newState;
 };
 
 // reducer
@@ -32,7 +33,7 @@ export default function reducer(state = [], action = {}) {
     case ADD_LIST:
       return [...state, action.payload];
     case DELETE_LIST:
-      return [...filterLists(state, action.payload)];
+      return filterLists(state, action.payload);
     default:
       return state;
   }

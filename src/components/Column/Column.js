@@ -28,22 +28,18 @@ class Column extends React.Component {
   }
 
   handleClickEditColumn() {
-    console.log('from click edit');
     this.setState({
       disabled: false,
     });
   }
 
   handleClickColumnInput(e) {
-    console.log('from click input');
     this.setState({
       value: e.target.value,
     });
   }
 
   handleClickSaveColumn(editColumn, value) {
-    console.log('from save');
-    console.log(value);
     this.setState({
       disabled: true,
       active: false,

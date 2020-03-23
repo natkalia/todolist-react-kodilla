@@ -34,23 +34,22 @@ export const createActionDeleteCard =
   payload => ({ payload, type: DELETE_CARD });
 
 // reducer helper functions
-const filterCards = (cards, cardId) => {
-  const filteredCards = cards.filter((element) => 
-    (element.id !== cardId)
+const filterCards = (state, cardId) => {
+  let newState = [...state];
+  newState = newState.filter((element) => 
+    element.id !== cardId
   );
-  return filteredCards;
+  return newState;
 };
 
-const editCards = (cards, payload) => {
-  const editedCards = cards.map(element => {
-    if (element.id === payload.id) {
-      element.title = payload.title;
-      return element;
-    } else {
-      return element;
+const editCard = (state, payload) => {
+  let newState = [...state];
+  newState.forEach((item, index, array) => {
+    if (array[index].id === payload.id) {
+      array[index] = {...payload};
     }
   });
-  return editedCards;
+  return newState;
 };
 
 // reducer
@@ -59,9 +58,9 @@ export default function reducer(state = [], action = {}) {
     case ADD_CARD:
       return [...state, action.payload];
     case DELETE_CARD:
-      return [...filterCards(state, action.payload)];
+      return filterCards(state, action.payload);
     case EDIT_CARD:
-      return [...editCards(state, action.payload)];
+      return editCard(state, action.payload);
     default:
       return state;
   }
