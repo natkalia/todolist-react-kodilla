@@ -26,6 +26,22 @@
 
   .title {
     flex: 40%;
+    width: 100%;
+    background: $color-light;
+    border: none;
+    padding: $base-size ($base-size * 1.5);
+    font-family: $font-text;
+    color: $color-dark;
+    border: 3px solid transparent;
+
+    &::placeholder {
+      color: $color-dark;
+    }
+
+    &.active {
+      border: 3px solid lighten($color-dark, 50%);
+      border-radius: $radius;
+    }
   }
 
   .icons {
@@ -33,17 +49,22 @@
     flex-wrap: nowrap;
   }
   
-  .trash, .edit {
+  .trash, .edit, .save {
     text-decoration: none;
     margin: $base-size $base-size/1.5;
-    flex: 30%;
+    vertical-align: middle;
   }
 
-  .trash:hover, .edit:hover {
+  .trash:hover, .edit:hover, .save:hover {
+    cursor: pointer;
     color: $color-warning;
   }
 
   .edit {
     color: $color-success;
+  }
+
+  .save {
+    color: darken($color-action, 10%);
   }
 }

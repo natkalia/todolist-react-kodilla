@@ -13,46 +13,76 @@ class Card extends React.Component {
     columns: PropTypes.array, 
     history: PropTypes.object, 
     deleteCard: PropTypes.func,
+    editCard: PropTypes.func,
     id: PropTypes.string,
   }
 
-  handleClickDelete(deleteCard, cardId) {
+  state = {
+    value: '',
+    disabled: true,
+  }
+
+  handleClickEditCard() {
+    this.setState({
+      disabled: false,
+    });
+  }
+
+  handleClickCardInput(e) {
+    this.setState({
+      value: e.target.value,
+    });
+  }
+
+  handleClickSaveCard(editCard, value) {
+    this.setState({
+      disabled: true,
+      active: false,
+    });
+    editCard(value);
+  }
+
+  handleClickDeleteCard(deleteCard, cardId) {
     if (confirm('Are you sure you want to delete this card?')) {
       deleteCard(cardId);
     }
   }
 
-  handleEditCard() {
-    // console.log('from handleEditCard in Card');
-    alert('Sorry, this feature is in progress and not yet available!');
-  }
-
   render() {
-    const {title, columns, columnId, deleteCard, id} = this.props;
+    const {title, columns, columnId, deleteCard, id, editCard} = this.props;
     const {pathname} = this.props.history.location;
-    
     return (
       <section className={styles.component}>
         <div className={styles.cardWrapper}>
-          <span className={styles.title}>{title}</span>
+          <input
+            className={ `${styles.title} ${this.state.disabled ? '' : styles.active} `} 
+            disabled={(this.state.disabled) ? true : false}
+            type='text'
+            placeholder={title}
+            value={this.state.value}
+            onChange={(e) => this.handleClickCardInput(e)}
+          />
           <div className={styles.icons}>
             <span
+              className={styles.save}
+              onClick={() => this.handleClickSaveCard(editCard, this.state.value)}>
+              <Icon name='save'/>
+            </span>
+            <span
               className={styles.edit}
-              onClick={() => this.handleEditCard()}>
+              onClick={() => this.handleClickEditCard()}>
               <Icon name='edit'/>
             </span>
             <span
               className={styles.trash} 
-              onClick={() => this.handleClickDelete(deleteCard, id)}>
+              onClick={() => this.handleClickDeleteCard(deleteCard, id)}>
               <Icon name='trash' />
             </span>
           </div>
         </div>
-
         {pathname.includes('search') &&
           <CardLink columns={columns} columnId={columnId}/>
         }        
-        
       </section>
     );
   }
