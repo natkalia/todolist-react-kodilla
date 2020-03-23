@@ -18,7 +18,7 @@ class Card extends React.Component {
   }
 
   state = {
-    value: '',
+    value: this.props.title,
     disabled: true,
   }
 
@@ -35,6 +35,7 @@ class Card extends React.Component {
   }
 
   handleClickSaveCard(editCard, value) {
+    console.log(value);
     this.setState({
       disabled: true,
       active: false,
@@ -56,6 +57,8 @@ class Card extends React.Component {
         <div className={styles.cardWrapper}>
           <input
             className={ `${styles.title} ${this.state.disabled ? '' : styles.active} `} 
+            min={2}
+            max={15}
             disabled={(this.state.disabled) ? true : false}
             type='text'
             placeholder={title}
