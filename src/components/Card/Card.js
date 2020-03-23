@@ -35,7 +35,6 @@ class Card extends React.Component {
   }
 
   handleClickSaveCard(editCard, value) {
-    console.log(value);
     this.setState({
       disabled: true,
       active: false,
