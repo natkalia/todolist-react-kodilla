@@ -16,6 +16,7 @@ const createActionName = name => `app/${reducerName}/${name}`;
 // action types
 export const ADD_COLUMN = createActionName('ADD_COLUMN');
 export const DELETE_COLUMN = createActionName('DELETE_COLUMN');
+export const EDIT_COLUMN = createActionName('EDIT_COLUMN');
 
 // action creators
 export const createActionAddColumn = 
@@ -23,6 +24,9 @@ export const createActionAddColumn =
 
 export const createActionDeleteColumn = 
   payload => ({ payload, type: DELETE_COLUMN });
+
+export const createActionEditColumn = 
+  payload => ({ payload, type: EDIT_COLUMN });
 
 // reducer helper functions
 const filterColumns = (columns, columnId) => {
@@ -32,6 +36,18 @@ const filterColumns = (columns, columnId) => {
   return filteredColumns;
 };
 
+const editColumns = (columns, payload) => {
+  const editedColumns = columns.map(element => {
+    if (element.id === payload.id) {
+      element.title = payload.title;
+      return element;
+    } else {
+      return element;
+    }
+  });
+  return editedColumns;
+};
+
 // reducer
 export default function reducer(state = [], action = {}) {
   switch (action.type) {
@@ -39,6 +55,8 @@ export default function reducer(state = [], action = {}) {
       return [...state, action.payload];
     case DELETE_COLUMN:
       return [...filterColumns(state, action.payload)];
+    case EDIT_COLUMN:
+      return [...editColumns(state, action.payload)];
     default:
       return state;
   }

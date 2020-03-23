@@ -16,22 +16,37 @@
 }
 
 .title {
-  text-align: center;
-  font-size: ($base-size * 1.5);
-  margin: 0 0 ($base-size * 1.5) 0;
   @include flex(row, center, center);
+  flex-wrap: wrap;
+  text-align: center;
+  width: 100%;
+  background: $color-light;
+  padding: $base-size;
+  font-family: $font-text;
+  font-size: ($base-size * 1.8);
+  color: $color-dark;
+  font-weight: 700;
+  border: 3px solid transparent;
+
+  &::placeholder {
+    color: $color-dark;
+  }
+
+  &.active {
+    border: 3px solid lighten($color-dark, 50%);
+    border-radius: $radius;
+  }
+
 }
 
 .icon > * {
-  padding-right: $base-size;
   color: lighten($color-medium, 5%);
-  font-size: ($base-size * 2);
+  font-size: ($base-size * 1.8);
   vertical-align: middle;
  }
 
-.trash > * {
+.trash > *, .edit > *, .save > * {
   padding-left: $base-size;
-  color: $color-dark;
   font-size: ($base-size * 2);
   vertical-align: middle;
 
@@ -39,6 +54,18 @@
     cursor: pointer;
     color: $color-warning;
   }
+}
+
+.trash {
+  color: $color-dark;
+}
+
+.edit {
+  color: $color-success;
+}
+
+.save {
+  color: darken($color-action, 10%);
 }
 
 @media (max-width: 767px) {
