@@ -43,7 +43,7 @@ class ListLink extends React.Component {
             <img src={image} />
           </div>
           <div className={styles.trash} onClick={(e) => this.handleDeleteListClick(e, id, deleteList)}>
-            <Icon name='trash' />
+            <Icon name='trash' title={'Click to delete'}/>
           </div>
         </section>
       </Link>

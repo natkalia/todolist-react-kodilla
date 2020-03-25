@@ -25,6 +25,7 @@ class Column extends React.Component {
   state = {
     value: this.props.title,
     disabled: true,
+    cards: this.props.cards,
   }
 
   handleClickEditColumn() {
@@ -53,13 +54,22 @@ class Column extends React.Component {
     }
   }
 
+  // sort cards alphabetically and rerender
+  handleClickSort(cards) {
+    if(confirm('Are you sure you want to sort cards alphabetically?')) {
+      this.setState({
+        cardsInColumn: cards.sort((a, b) => (a.title > b.title) ? 1 : -1),
+      });
+    }
+  }
+
   render() {
     const {title, icon, cards, addCard, deleteColumn, editColumn, id} = this.props;
     return (
       <section className={styles.component}>
         <h3 className={styles.title}>
           <span className={styles.icon}>
-            <Icon name={icon}/>
+            <Icon name={icon} title={''}/>
           </span>
           <input
             className={ `${styles.title} ${this.state.disabled ? '' : styles.active} `} 
@@ -69,22 +79,27 @@ class Column extends React.Component {
             type='text'
             placeholder={title}
             value={this.state.value}
-            onChange={(e) => this.handleClickColumnInput(e)}
+            onChange={e => this.handleClickColumnInput(e)}
           />
+          <span 
+            onClick = {() => this.handleClickSort(cards)}
+            className={styles.sort}>
+            <Icon name='sort' title={'Click to sort alphabetically'}/>
+          </span>
           <span 
             onClick = {() => this.handleClickSaveColumn(editColumn, this.state.value)}
             className={styles.save}>
-            <Icon name='save'/>
+            <Icon name='save' title={'Click to save'}/>
           </span>
           <span 
             onClick = {() => this.handleClickEditColumn()}
             className={styles.edit}>
-            <Icon name='edit'/>
+            <Icon name='edit' title={'Click to edit'}/>
           </span>
           <span 
             onClick = {() => this.handleClickDeleteColumn(deleteColumn, id)}
             className={styles.trash}>
-            <Icon name='trash'/>
+            <Icon name='trash' title={'Click to delete'}/>
           </span>
         </h3>
         <div className={styles.cards}>

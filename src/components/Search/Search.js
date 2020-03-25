@@ -57,7 +57,7 @@ class Search extends React.Component {
           />
           <Button onClick={() => 
             this.handleOK()}>
-            <Icon name={icon} />
+            <Icon name={icon} title={'Click to search'}/>
           </Button>
 
           {pathname.includes('search') && 

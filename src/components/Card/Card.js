@@ -68,17 +68,17 @@ class Card extends React.Component {
             <span
               className={styles.save}
               onClick={() => this.handleClickSaveCard(editCard, this.state.value)}>
-              <Icon name='save'/>
+              <Icon name='save' title={'Click to save'}/>
             </span>
             <span
               className={styles.edit}
               onClick={() => this.handleClickEditCard()}>
-              <Icon name='edit'/>
+              <Icon name='edit' title={'Click to edit'}/>
             </span>
             <span
               className={styles.trash} 
               onClick={() => this.handleClickDeleteCard(deleteCard, id)}>
-              <Icon name='trash' />
+              <Icon name='trash' title={'Click to delete'} />
             </span>
           </div>
         </div>

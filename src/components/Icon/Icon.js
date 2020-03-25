@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Icon = props => (<i className={`fas fa-${props.name}`}></i>);
+const Icon = props => (<i title={props.title}className={`fas fa-${props.name}`}></i>);
 
-/* typechecking on the props for a component with prop-types library*/
 Icon.propTypes = {
+  title: PropTypes.string,
   name: PropTypes.string,
 };
 

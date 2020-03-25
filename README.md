@@ -60,7 +60,8 @@ these cards could be found easier after user is redirected from SearchResults
 - [x] add possibility to delete Column
 - [x] add possibility to delete List
 - [x] if user clicks on margin of ListLink, link is active - should be refactored
-- [ ] add sorting Cards alphabetically
+- [x] add sorting Cards alphabetically
+- [ ] add sorting Cards by creation date (use timestamp)
 - [ ] if Column or List is deleted, its Cards or Columns with Cards remain in store - should be fixed
   
 ## Project status

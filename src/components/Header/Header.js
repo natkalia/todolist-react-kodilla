@@ -15,7 +15,7 @@ class Header extends React.Component {
             <Link 
               to='/'
               className={styles.logo}>
-              <Icon name={settings.header.icon}/>
+              <Icon name={settings.header.icon} title={'Click for home'}/>
             </Link>
             <Search/>
             <nav className={styles.nav}>
