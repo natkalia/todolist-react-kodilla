@@ -44,7 +44,7 @@ Description of linters coming soon.
 - [x] add simple animation for apperance of 'To do... doing... done!' in splash
 - [ ] add hamburger for RWD in navigation
 - [ ] fix buttons in creator for RWD
-- [ ] fix problem with buttons apperance that is now based on opacity
+- [x] fix problem with buttons apperance that is now based on opacity
 - [x] update webpack and dataStore for context/output paths to work for lists images
 - [ ] fix problem with routing on heroku (when refreshing or using browser navigation)
 - [x] fix bug with cards in columns (list subpage) - not properly showing, problem with adding new cards, but only after a search was performed

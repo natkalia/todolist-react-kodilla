@@ -16,15 +16,13 @@
 
 .buttons {
   
-  @include flex(row, space-between, center);
-  
-  opacity: 0;
-  height: 0;
+  display: none;
   transition: all 200ms;
 
   &.buttonsShown {
-    opacity: 1;
-    height: 40px;
+    display: inline-block;
+    margin: 0 25%;
+    @include flex(row, center, center);
   }
 
   > * {

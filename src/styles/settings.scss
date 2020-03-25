@@ -18,8 +18,8 @@ $transition: all 0.5s;
 @mixin flex($flex-direction, $justify-content, $align-items ) {
   display: flex;
   flex-direction: $flex-direction;
-  align-items: $align-items;
   justify-content: $justify-content;
+  align-items: $align-items;
 }
   
 @mixin breakpoint($point) {
