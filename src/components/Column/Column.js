@@ -34,7 +34,7 @@ class Column extends React.Component {
     });
   }
 
-  handleClickColumnInput(e) {
+  handleChangeColumnInput(e) {
     this.setState({
       value: e.target.value,
     });
@@ -63,6 +63,17 @@ class Column extends React.Component {
     }
   }
 
+  handleKeyUp(e, editColumn) {
+    if (e.key === 'Enter') {
+      this.setState({
+        value: e.target.value,
+        disabled: true,
+        active: false,
+      });
+      editColumn(this.state.value);
+    }
+  }
+
   render() {
     const {title, icon, cards, addCard, deleteColumn, editColumn, id} = this.props;
     return (
@@ -79,7 +90,8 @@ class Column extends React.Component {
             type='text'
             placeholder={title}
             value={this.state.value}
-            onChange={e => this.handleClickColumnInput(e)}
+            onChange={e => this.handleChangeColumnInput(e)}
+            onKeyUp={e => this.handleKeyUp(e, editColumn)}
           />
           <span 
             onClick = {() => this.handleClickSort(cards)}

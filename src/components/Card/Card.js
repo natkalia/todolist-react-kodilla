@@ -28,7 +28,7 @@ class Card extends React.Component {
     });
   }
 
-  handleClickCardInput(e) {
+  handleChangekCardInput(e) {
     this.setState({
       value: e.target.value,
     });
@@ -48,6 +48,17 @@ class Card extends React.Component {
     }
   }
 
+  handleKeyUp(e, editCard) {
+    if (e.key === 'Enter') {
+      this.setState({
+        value: e.target.value,
+        disabled: true,
+        active: false,
+      });
+      editCard(this.state.value);
+    }
+  }
+
   render() {
     const {title, columns, columnId, deleteCard, id, editCard} = this.props;
     const {pathname} = this.props.history.location;
@@ -62,7 +73,8 @@ class Card extends React.Component {
             type='text'
             placeholder={title}
             value={this.state.value}
-            onChange={(e) => this.handleClickCardInput(e)}
+            onChange={e => this.handleChangekCardInput(e)}
+            onKeyUp={e => this.handleKeyUp(e, editCard)}
           />
           <div className={styles.icons}>
             <span
